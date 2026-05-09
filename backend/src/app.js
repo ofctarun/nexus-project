@@ -14,10 +14,7 @@ import dotenv from "dotenv";
 dotenv.config()
 
 const app = express();
-app.use(cors({
-    origin: ["http://localhost:5173", "https://devtinderrr.vercel.app"],
-    credentials: true,
-}));
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 app.use(cookieParser());
 
